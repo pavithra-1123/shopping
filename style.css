@@ -1,0 +1,141 @@
+*, *::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    font-size: medium;
+}
+.container{
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header {
+    color: #FF6B82;
+    text-align: center;
+    padding: 10px; 
+    font-weight: bold; 
+    margin-top: 40px;
+}
+.line{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    column-gap: 1rem;
+}
+.line::before, .line::after{
+    content: "";
+    height: 1px;
+    background-color: #C8C8C8;
+    display: block;
+}
+/* .lay{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    row-gap: 3rem;
+}
+.layout1,.layout2, .layout3{
+    border: 2px solid #C8C8C8;
+    text-align: left; 
+    padding: 20px;
+    font-weight: bold;
+    
+}
+.layout_content{
+    margin-left: 10px;
+    
+}
+
+ */
+
+.offer{
+    background-color: #FF6B82;
+    color: white;
+    margin-left: 0.5rem;
+}
+.dollar{
+    margin-left: 200px;
+    /* justify-content:space-around; */
+}
+.main
+{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    row-gap: 1.5rem;
+
+}
+
+.accordian li{
+    list-style-type: none;
+    border: 2px solid #C8C8C8;
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    
+}
+.accordian li label{
+    cursor: pointer;
+}
+label::before{
+    content: '';
+    margin-right:10px ;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+
+.radiodown{
+    display: flex;
+    justify-content: space-evenly;
+    column-gap: 200px;
+    font-size: small;
+}
+.accordian .content{
+    margin-top: 10px;
+    margin-left: 50px;
+    margin-bottom: 5px;
+    padding:0 10px ;
+    line-height: 26px;
+    max-height: 0;
+    overflow: hidden; 
+    transition: max-height 0.5s, padding 0.5s ;
+    
+}
+.accordian input[type="radio"]:checked + label + .content{
+    max-height: 400px;
+    padding: 10px 10px 20px;
+}
+.cont{
+    margin-bottom: 10px;
+}
+
+
+
+
+
+.delivery{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 10px;
+}
+.del{
+    color:#FF6B82;
+    
+}
+
+.btn{
+    background-color: #FF6B82;
+    width: 100%;
+}
+footer{
+    text-align: end;
+}
