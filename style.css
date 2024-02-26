@@ -11,6 +11,7 @@ body {
     font-size: medium;
 }
 .container{
+    width: 100%;
     height: 10vh;
     display: flex;
     align-items: center;
@@ -35,25 +36,8 @@ header {
     background-color: #C8C8C8;
     display: block;
 }
-/* .lay{
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    align-items: center;
-    row-gap: 3rem;
-}
-.layout1,.layout2, .layout3{
-    border: 2px solid #C8C8C8;
-    text-align: left; 
-    padding: 20px;
-    font-weight: bold;
-    
-}
-.layout_content{
-    margin-left: 10px;
-    
-}
 
- */
+
 
 .offer{
     background-color: #FF6B82;
@@ -73,24 +57,38 @@ header {
 
 }
 
+.accordian{
+    margin: 10px auto;
+    width: 100%;
+}
+
 .accordian li{
     list-style-type: none;
     border: 2px solid #C8C8C8;
     width: 100%;
     padding: 10px;
+    margin: 10px;
     border-radius: 8px;
     
 }
 .accordian li label{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: 500;
     cursor: pointer;
 }
 label::before{
-    content: '';
+    content: '+';
     margin-right:10px ;
     font-size: 24px;
     font-weight: 600;
 }
-
+input[type="radio"] {
+    display: none;
+  }
+ 
 
 .radiodown{
     display: flex;
@@ -109,8 +107,9 @@ label::before{
     transition: max-height 0.5s, padding 0.5s ;
     
 }
-.accordian input[type="radio"]:checked + label + .content{
-    max-height: 400px;
+
+.accordian input[type="radio"]:checked + label + .content+ .cont + .radiodown{
+    max-height: 100%;
     padding: 10px 10px 20px;
 }
 .cont{
@@ -139,3 +138,65 @@ label::before{
 footer{
     text-align: end;
 }
+
+
+
+@media  screen and (min-width : 768px) {
+    body{
+        margin: 0;
+    }
+    .section{
+        padding-top: 4rem;
+        padding-bottom: 3rem;
+    }
+    
+    .home_social_icon{
+        margin-bottom: 0;
+        margin-right: var(--mb-4);
+    }
+    .home_img{
+        width: 350px;
+        bottom: 5%;
+        position: absolute;
+    }
+    .home_img img{
+        width: 100%;
+    }
+    .about_container, .skills_container{
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        text-align: initial;
+
+    }
+    .about_img svg{
+        width: 440px;
+       
+    }
+
+    .work_container{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+    
+
+}
+
+@media screen and (min-width : 1024px){
+    .bdgrid{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .home_img{
+        right: 8%;
+    }
+    .project-card {
+        padding: 10px;
+        width: 100%;
+    }
+    .education-block {
+        padding: 10px;
+        width: 100%;
+    }
+}
+ 
